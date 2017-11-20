@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Psychic Game</title>
+
+</head>
+
+<body>
+    <div>
+    <h1>Psychic Game</h1>
+    <div id="game">Guess a letter! </div>
+<script type="text/javascript">
+    var computerChoices = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    var wins = 0;
+    var losses = 0;
+    var remainingGuesses = 10;
+    var currentGuesses = [];
+    var userGuess = undefined;
+    var guessedLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+    //this is where i think i will need a for loop to rerun choices. i do not think it is working correcty as it is now
+    //for(i = 0; i < computerChoices; i++){
+
+
+console.log(String(guessedLetter));
+document.onkeyup = function(event){
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    guess = HTMLInputElement("What's your guess?");
+    guessedLetter.innerHTML("Guess #"+currentGuesses+" was "+userGuess+"<BR>");
+
+    if (guessedLetter == userGuess) {
+        guessedLetter.innerHTML("You guessed it!<BR>");
+        }
+        else (guessedLetter < userGuess)  
+            guessedLetter.innerHTML("you lose!");
+            }
+          
+    
+    while (currentGuesses <10 && userGuess != guessedLetter);
+
+if (userGuess != guessedLetter) {
+    guessedLetter.innerHTML("I fooled you 10 times - the latter was " + computerChoices+".<BR>");
+        };
+
+function ClearFields() {
+
+     document.getElementById('guess').value = "";
+}
+    //if (guessedLetter == userGuess) {
+      //  wins++;
+        //remainingGuesses--;
+//        currentGuesses--;
+  //      guessedLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      //  alert("You Win!");
+        //console.log("Winner");
+        //}
+
+//    else if (guessedLetter = userGuess) {
+ //       wins++;
+  //      remainingGuesses--;
+   //     currentGuesses--;
+    //    guessedLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+     //   document.getElementById('sound').play();
+      //  alert("You lose!");
+       // console.log("Loser");
+    
+
+    //else (remainingGuesses == 0) {
+       // losses++;
+       // alert("You lose!");
+       // console.log("Loss");
+
+</script>
+
+</body>
+
+</html>
